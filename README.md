@@ -27,3 +27,24 @@ Took log of the price distribution to make it more Gaussian. This can improve th
 <img width="300" alt="Screenshot 2023-05-17 at 12 35 33 PM" src="https://github.com/ayushs0911/Laptop-Price-Predictions/assets/122048067/dd3883b9-e6ec-4f7d-9831-4b73c6f12853">
 <img width="300" alt="Screenshot 2023-05-17 at 12 35 49 PM" src="https://github.com/ayushs0911/Laptop-Price-Predictions/assets/122048067/49527580-6d51-4b3f-abe1-6573b183d710">
 <img width="300" alt="Screenshot 2023-05-17 at 12 45 00 PM" src="https://github.com/ayushs0911/Laptop-Price-Predictions/assets/122048067/c817896a-a49c-41c8-a3af-002d9928ef56">
+
+## Models 
+- `Linear Regression` : R2 score 0.8073277448418601 MAE 0.21017827976428896
+- `Ridge Regression` : R2 score 0.8127331031311809 MAE 0.20926802242582968
+- `Lasso Regression` : R2 score 0.8071857196899417 MAE 0.2111435071691317
+- `Decision Tree` : R2 score 0.8279260753130654 MAE 0.1869543941221999
+- `Random Forest` : R2 score 0.8851499847098487 MAE 0.15870252595141304 <br>
+### Hyperparameter Tuning for Random Forest 
+```
+rf1 = RandomForestRegressor(n_estimators=100,
+                              random_state=3,
+                              max_samples=0.5,
+                              max_features=0.75,
+                              max_depth=15)
+
+rf1.fit(X_train,y_train)
+print(f'R2 score : {metrics.r2_score(y_test,rf1.predict(X_test))}')
+```
+## Comparing Predicted Values and True Values. 
+
+<img width="606" alt="Screenshot 2023-05-17 at 1 03 25 PM" src="https://github.com/ayushs0911/Laptop-Price-Predictions/assets/122048067/91ae4650-5ded-404c-a91d-df44abb83124">
