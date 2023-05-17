@@ -7,6 +7,7 @@ Dataset Details :
 **Price Distribution :** Slightly Left skewed<br>
   <img width="300" alt="Screenshot 2023-05-17 at 12 25 11 PM" src="https://github.com/ayushs0911/Laptop-Price-Predictions/assets/122048067/ff11fc2e-c75c-463c-a106-1c36a2756440"><br>
 Took log of the price distribution to make it more Gaussian. This can improve the assumptions of linear regression models that assume normally distributed errors.<br>
+<img width="300" alt="Screenshot 2023-05-17 at 1 09 54 PM" src="https://github.com/ayushs0911/Laptop-Price-Predictions/assets/122048067/b6ee0b02-2138-49ac-b74a-9dc815626415">
 
 ## Data Preprocessing 
 - `RAM` : Dropped "GB", and converted to `int`
